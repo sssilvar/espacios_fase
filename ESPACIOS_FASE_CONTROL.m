@@ -8,7 +8,7 @@ addpath(genpath('04_phase_space'))
 
 %% Dataset
 % dataset_folder = 'C:\Users\bater\Documents\Dataset_riie\All';
-dataset_folder = 'home/jullygh/Dataset_riie/All';
+dataset_folder = '/home/jullygh/Dataset_riie/All';
 ruta = [dataset_folder, filesep, 'Controls', filesep 'GoPro'];
 
 
