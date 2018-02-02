@@ -13,7 +13,7 @@ ruta = [dataset_folder, filesep, 'Controls', filesep 'GoPro'];
 
 
 %% Iniciar procesos en paralelo (crear pool)
-LASTN = maxNumCompThreads(12);
+LASTN = maxNumCompThreads(10);
 
 % % Extraer frames
 % if exist([dataset_folder, filesep, 'SUCCESS'], 'file') ~= 2 
