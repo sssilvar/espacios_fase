@@ -12,7 +12,6 @@ function video2frames( video_file, extension )
 % Extract video path and filename
 [filepath,name, ~] = fileparts(video_file);
 folder_destination = [filepath, filesep, 'muestra'];
-% folder_destination = [filepath, filesep, name];
 
 % Load video
 video = VideoReader(video_file);

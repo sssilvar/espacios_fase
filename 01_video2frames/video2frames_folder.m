@@ -1,12 +1,13 @@
 %% VIDEO2FRAMES
 %   This code goes over every folder looking for videos and converting them
-%   into frames.
+%   into frames. 
 
 %% Add libraries and files separator (f)
 addpath(genpath('lib'));
 f = filesep;
 
 %% Set dataset folder
+% dataset_folder = 'C:\Users\bater\Documents\Dataset_riie\All';
 dataset_folder = '/home/jullygh/Dataset_riie/All';
 
 %% Start looking for videos inside dataset_folder
@@ -15,7 +16,7 @@ dataset_folder = '/home/jullygh/Dataset_riie/All';
 control_folder = [dataset_folder, f, 'Controls/GoPro/'];
 control_dir = new_dir(control_folder);
 
-for i = 1:length(control_dir)
+for i = 1:1%length(control_dir)
     if ~isequal(control_dir(i).name, '.') && ~isequal(control_dir(i).name, '..')        
 
         smooth_dir = new_dir([control_dir(i).path, f, control_dir(i).name, f, 'SMOOTH/*.MP4']);
