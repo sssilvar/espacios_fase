@@ -7,8 +7,9 @@ addpath(genpath('03_optical_flow'))
 addpath(genpath('04_phase_space'))
 
 %% Dataset
-dataset_folder = 'home/jullygh/Dataset_riie/All';
 % dataset_folder = 'C:\Users\bater\Documents\Dataset_riie\All';
+dataset_folder = 'home/jullygh/Dataset_riie/All';
+ruta = [dataset_folder, filesep, 'Controls', filesep 'GoPro'];
 
 
 %% Iniciar procesos en paralelo (crear pool)
@@ -21,7 +22,6 @@ LASTN = maxNumCompThreads(12);
 
 %% Iniciar procesamiento
 % Extraer la lista de sujetos
-ruta = [dataset_folder, filesep, 'Controls', filesep 'GoPro'];
 w=dir(ruta);
 w=w(3:end,:);
 
