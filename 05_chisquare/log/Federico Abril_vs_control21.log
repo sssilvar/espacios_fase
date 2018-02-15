@@ -1,18 +1,11 @@
-   15-Feb-2018 13:50:04
+   15-Feb-2018 15:24:04
 
 [  OK  ] SACCAD processing has been made
-         0    0.1192
-    0.1192         0
+[  RESULTS  ] CM1:
+         0    0.0645
+    0.0645         0
 
-         0    0.0880
-    0.0880         0
-
-   15-Feb-2018 13:52:38
-
-[  OK  ] SMOOTH processing has been made
-         0    0.1682
-    0.1682         0
-
-         0    0.1431
-    0.1431         0
+[  RESULTS  ] CM2:
+         0    0.1455
+    0.1455         0
 

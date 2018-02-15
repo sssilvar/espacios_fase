@@ -12,8 +12,8 @@ sujeto_cp = 'Federico Abril';
 frame_saccad = 111;
 frame_smooth = 120;
 
-control_folder = 'C:\Users\Smith\Downloads\temp\Pruebachiq\';
-cp_folder = 'C:\Users\Smith\Downloads\temp\Pruebachiq\';
+control_folder = '/home/jullygh/Dataset_riie/All/Controls/GoPro/';
+cp_folder = '/home/jullygh/Dataset_riie/All/CP/GoPro/';
 
 log_file = ['log', f, sujeto_cp, '_vs_', sujeto_control, '.log'];
 
@@ -50,7 +50,7 @@ for fi= 1 : numel(folders)
     % h=histogram(ang(:,:,1360),'BinLimits',[0,90],'NumBins',18,'normalization','probability') 
     % xlabel('Angle')
     % ylabel('Frequency')
-    h = histcounts(ang(:,:,frame(fi)),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
+    h = histcounts(ang(:,:,frames(fi)),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
     eye_1(:,C)=h';
 
 
@@ -65,7 +65,7 @@ for fi= 1 : numel(folders)
     % h=histogram(ang(:,:,1360),'BinLimits',[0,90],'NumBins',18,'normalization','probability')
     % xlabel('Angle')
     % ylabel('Frequency')
-    h=histcounts(ang(:,:,frame(fi),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
+    h=histcounts(ang(:,:,frames(fi)),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
     eye_2(:,C)=h';
     end
 
