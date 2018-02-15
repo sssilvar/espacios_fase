@@ -9,6 +9,9 @@ f = filesep;
 sujeto_control = 'control21';
 sujeto_cp = 'Federico Abril';
 
+frame_saccad = 111;
+frame_smooth = 120;
+
 control_folder = 'C:\Users\Smith\Downloads\temp\Pruebachiq\';
 cp_folder = 'C:\Users\Smith\Downloads\temp\Pruebachiq\';
 
@@ -16,6 +19,7 @@ log_file = ['log', f, sujeto_cp, '_vs_', sujeto_control, '.log'];
 
 %% Programa: NO TOCAR
 % Calcula metrica
+frames = [frame_saccad, frame_smooth];
 folders = {'SACCAD', 'SMOOTH'};
 A = {[cp_folder, sujeto_cp], [control_folder, sujeto_control]};
 eye_1=[];
@@ -46,7 +50,7 @@ for fi= 1 : numel(folders)
     % h=histogram(ang(:,:,1360),'BinLimits',[0,90],'NumBins',18,'normalization','probability') 
     % xlabel('Angle')
     % ylabel('Frequency')
-    h = histcounts(ang(:,:,1360),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
+    h = histcounts(ang(:,:,frame(fi)),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
     eye_1(:,C)=h';
 
 
@@ -61,7 +65,7 @@ for fi= 1 : numel(folders)
     % h=histogram(ang(:,:,1360),'BinLimits',[0,90],'NumBins',18,'normalization','probability')
     % xlabel('Angle')
     % ylabel('Frequency')
-    h=histcounts(ang(:,:,1360),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
+    h=histcounts(ang(:,:,frame(fi),'BinLimits',[0,90],'NumBins',18,'normalization','probability');
     eye_2(:,C)=h';
     end
 
@@ -88,7 +92,9 @@ for fi= 1 : numel(folders)
     diary(log_file);
     disp(datetime('now'))
     disp(['[  OK  ] ', current_folder, ' processing has been made'])
+    disp('[  RESULTS  ] CM1:')
     disp(cm1)
+    disp('[  RESULTS  ] CM2:')
     disp(cm2)
     diary off
 end
