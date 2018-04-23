@@ -6,8 +6,8 @@ clear, clc;
 addpath(genpath('../03_optical_flow/AIM'))
 
 %% Configurar los sujetos a comparar
-CP = 'C:\Users\sssilvar\Downloads\temp\cp\AnaM\SACCAD';
-CONTROL = 'C:\Users\sssilvar\Downloads\temp\cp\Control\SACCAD';
+CP = 'C:\Users\sssilvar\Downloads\temp\cp\AnaM\SMOOTH';
+CONTROL = 'C:\Users\sssilvar\Downloads\temp\cp\Control\SMOOTH';
 
 metodoFlujoOptico = 'HS';
 

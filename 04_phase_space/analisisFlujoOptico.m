@@ -7,7 +7,11 @@ function [mag_vel, mag_acel, phase_vel, phase_acel, roi] = analisisFlujoOptico(d
 % Ej: addpath(genpath('C:\Users\sssilvar\GitHub\espacios_fase\03_optical_flow\AIM'))
 
 %% Definir nombres de archivos
-ojosMat = fullfile(directorioSujeto, 'SACCAD_ojos.mat'); % Segmentación ojos
+if strfind(directorioSujeto, 'SMOOTH')
+    ojosMat = fullfile(directorioSujeto, 'SMOOTH_ojos.mat'); % Segmentación ojos
+elseif strfind(directorioSujeto, 'SACCAD')
+    ojosMat = fullfile(directorioSujeto, 'SACCAD_ojos.mat'); % Segmentación ojos
+end
 carpetaMuestra = fullfile(directorioSujeto, 'muestra');
 
 % Definir archivos de salida
